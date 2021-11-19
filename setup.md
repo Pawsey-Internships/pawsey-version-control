@@ -11,6 +11,8 @@ We'll do our work in the `Desktop` folder so make sure you change your working d
 ~~~
 $ cd
 $ cd Desktop
+$ git --version # Check to see if Git is installed on your system
+$ open https://carpentries.github.io/workshop-template/#git # Installation instructions for Git
 ~~~
 {: .language-bash}
 

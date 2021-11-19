@@ -278,6 +278,8 @@ Hi Vlad! You've successfully authenticated, but GitHub does not provide shell ac
 ~~~
 {: .output}
 
+Note: To achieve the above output, you may be prompted to enter your previously created passphrase. If so, type in the passphrase and press enter.
+
 ## Push local changes to a remote
 
 Now that authentication is setup, we can return to the remote.  This command will push the changes from
@@ -289,7 +291,19 @@ $ git push origin main
 {: .language-bash}
 
 Since Dracula set up a passphrase, it will prompt him for it.  If you completed advanced settings for your authentication, it 
-will not prompt for a passphrase. 
+will not prompt for a passphrase. IMPORTANT: GitHub has recently transitioned from password authentication to personal access token (PAT) (August 2021). You may be prompted by a pop up window to connect to GitHub. In this case, we will create a PAT. If this is relevant to you (otherwise skip this next step). We will create a PAT for your GitHub account:
+
+~~~
+$ open https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
+~~~
+{: .language-bash}
+
+Once this is entered once in your system's secure Credential Manager, you should be able to continue, let's try again:
+
+~~~
+$ git push origin main
+~~~
+{: .language-bash}
 
 ~~~
 Enumerating objects: 16, done.
