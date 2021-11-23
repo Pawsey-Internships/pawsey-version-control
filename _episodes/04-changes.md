@@ -22,7 +22,7 @@ First let's make sure we're still in the right directory.
 You should be in the `planets` directory.
 
 ~~~
-$ cd ~/Desktop/planets
+$ cd ~/planets
 ~~~
 {: .language-bash}
 
