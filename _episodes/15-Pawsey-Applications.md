@@ -34,7 +34,8 @@ If you don't see the above output, you can clone directory with
 `git clone https://github.com/PawseySC/Introductory-Supercomputing.git`.
 
 Let's change from the PawseySC account remote repository to our 
-own newly created private repo.
+own newly created private repo. Replace "username" with your 
+GitHub account username.
 
 ~~~
 $ cd Introductory-Supercomputing
@@ -51,11 +52,11 @@ origin	git@github.com:username/test-vc.git (push)
 ~~~
 {: .output}
 
-and then push the change to GitHub:
+Now, then push the change to GitHub:
 
 ~~~
 $ git add .
-$ git commit -m "First commit to private repo"
+$ git commit -m "First commit"
 ~~~
 {: .language-bash}
 
@@ -89,7 +90,7 @@ $ ssh-keygen -t ed25519 -C "github-account-email@gmail.com"
 {: .language-bash}
 
 1. Now press enter for the default file.
-2. Enter passphrase twice and note it down.
+2. Enter a passphrase twice and note it down.
 
 ~~~
 $ cat ~/.ssh/id_ed25519.pub
