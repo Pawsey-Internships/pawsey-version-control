@@ -197,7 +197,7 @@ and reconcile the changes.
 We can do anything we want: keep the change made in the local repository, keep
 the change made in the remote repository, write something new to replace both,
 or get rid of the change entirely.
-Let's replace both so that the file looks like this:
+Let's replace (CTRL + K to delete line in nano) both so that the file looks like this:
 
 ~~~
 $ cat mars.txt
