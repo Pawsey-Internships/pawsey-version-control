@@ -431,6 +431,10 @@ index 315bf3a..b36abfd 100644
 it shows us the difference between
 the last committed change
 and what's in the staging area.
+  
+The difference between git diff and git diff --staged can be illustrated as shown below:
+![git diff vs. git diff --staged](../fig/figure_git_diff.png)
+  
 Let's save our changes:
 
 ~~~
