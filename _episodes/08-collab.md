@@ -15,7 +15,9 @@ keypoints:
 For the next step, get into pairs.  One person will be the "Owner" and the other
 will be the "Collaborator". The goal is that the Collaborator add changes into
 the Owner's repository. We will switch roles at the end, so both persons will
-play Owner and Collaborator.
+play Owner and Collaborator. Now is a good time to ask Jordan 
+(or other instructor) about setting Collaborator-Owner pairs if he has forgotten.
+Hint: pairs.png
 
 > ## Practicing By Yourself
 >
@@ -36,9 +38,7 @@ needs to go to [https://github.com/notifications](https://github.com/notificatio
 Once there she can accept access to the Owner's repo.
 
 Next, the Collaborator needs to download a copy of the Owner's repository to her
-machine. This is called "cloning a repo". Now is a good time to ask Jordan 
-(or other instructor) about setting Collaborator-Owner pairs if he has forgotten.
-Hint: pairs.xlsx
+machine. This is called "cloning a repo". 
 
 To clone the Owner's repo into
 her `Desktop` folder, the Collaborator enters (replace 'vlad' with 
