@@ -433,7 +433,8 @@ the last committed change
 and what's in the staging area.
   
 The difference between git diff and git diff --staged can be illustrated as shown below:
-![git diff vs. git diff --staged](../fig/figure_git_diff.png)
+<img src="../fig/figure_git_diff.png" width="500">
+
   
 Let's save our changes:
 
