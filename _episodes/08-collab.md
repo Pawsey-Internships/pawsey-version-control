@@ -36,17 +36,18 @@ needs to go to [https://github.com/notifications](https://github.com/notificatio
 Once there she can accept access to the Owner's repo.
 
 Next, the Collaborator needs to download a copy of the Owner's repository to her
-machine. This is called "cloning a repo".
+machine. This is called "cloning a repo". Now is a good time to ask Jordan 
+(or other instructor) about setting Collaborator-Owner pairs if he has forgotten.
+Hint: pairs.xlsx
 
 To clone the Owner's repo into
-her `Desktop` folder, the Collaborator enters:
+her `Desktop` folder, the Collaborator enters (replace 'vlad' with 
+ Owner's username):
 
 ~~~
 $ git clone https://github.com/vlad/planets.git ~/Desktop/vlad-planets
 ~~~
 {: .language-bash}
-
-Replace 'vlad' with the Owner's username.
 
 If you choose to clone without the clone path
 (`~/Desktop/vlad-planets`) specified at the end,
