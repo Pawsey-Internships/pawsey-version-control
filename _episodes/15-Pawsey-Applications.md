@@ -30,7 +30,11 @@ Introductory-Supercomputing
 ~~~
 {: .output}
 
-Let's add a line to the collaborator's copy only:
+If you don't see the above output, you can clone directory with 
+`git clone https://github.com/PawseySC/Introductory-Supercomputing.git`.
+
+Let's change from the PawseySC account remote repository to our 
+own newly created private repo.
 
 ~~~
 $ cd Introductory-Supercomputing
