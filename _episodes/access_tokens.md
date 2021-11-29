@@ -20,7 +20,7 @@ You can create a PAT for GitHub in your [account settings](https://github.com/se
 
 Accessing the link should lead to the following prompt, if you are setting up your PAT for the first time. The screen looks slightly different, if you already created a PAT before and are renewing your PAT.
 
---> screenshots
+![Generate new Token](../fig/generate_new_token.png)
 
 Click on generate new token, and add the following details on the subsequent page:
 
@@ -46,7 +46,7 @@ Open the **Credential Manager**, then click on **Windows Credentials** and **Add
 Alternatively, use the following path: Control Panel\All Control Panel Items\Credential Manager\Add a Generic Credential
 You should see the below screen on your machine and enter the network address as below, your GitHub username as username, and your PAT as your password.
 
---> screenshot entering.
+![Windows Credential Manager](../fig/add-generic-credential.png)
 
 Note: This should then work for most machines, when accessing Git through the CLI (Linux subsystem), as then credentials are automatically retrieved and don't need to be entered manually at every clone, push, or pull operation.
 
@@ -55,9 +55,19 @@ Note: This should then work for most machines, when accessing Git through the CL
 Another option for Windows, is to use the Git Credential Manager for Windows (GCM). The GCM can be automatically installed when installing GitBash (Git for Windows).
 When installing Git for Windows, the credential manager can be automatically installed during installation.
 
---> screenshot
+![GCM Installation GitBash](../fig/git-for-windows-CM.png)
+
+As a next step, you clone a repository or push to a repository and if it's the first attempt you will be prompted to the below window. You choose to login via "Token", and enter the PAT generated in the above steps.
+
+![GCM Login](../fig/token-gitforwindows.png)
+
+The GCM via BitGash automatically stores the PAT, therefore the process only needs to be performed once. In future cloning, pushing, or pulling the PAT will be automatically retrieved using the GCM.
 
 Here you can find additional [Instructions for GCM](https://github.com/GitCredentialManager/git-credential-manager) from the official GitHub Repository.
+
+### Option 3: Git Credential Manager (without GitBash / Git for Windows)
+
+If you want to use the GCM via a Linux Subsystem, the steps are different from Option 2, as the GCM is not automatically installed.
 
 
 
