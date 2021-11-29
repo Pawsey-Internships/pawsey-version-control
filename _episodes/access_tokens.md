@@ -50,14 +50,10 @@ Note: This should then work for most machines, when accessing Git through the CL
 
 Another option for Windows, is to use the Git Credential Manager for Windows (GCM). The GCM can be automatically installed when installing GitBash (Git for Windows).
 More information about the GCM can be found on the [website](http://microsoft.github.io/Git-Credential-Manager-for-Windows/Docs/CredentialManager.html).
-When installing Git for Windows, the credential manager is often automatically installed, or can be ticked during installation. You can check if the GCM is installed by typing the following term in your **Windows** command line (Powershell, cmd.exe, or GitBash work).
+When installing Git for Windows, the credential manager is often automatically installed, or can be ticked during installation.
 
-~~~
-$ where git-credential-manager.exe
-~~~
-{: .language-bash}
 
-If the command returns a path, the GCM is installed. Usually it is to be found under the following path: C:\Program Files\Git\mingw64\libexec\git-core\git-credential-manager.exe
+[Instructions for GCM](https://github.com/GitCredentialManager/git-credential-manager)
 
 
 
