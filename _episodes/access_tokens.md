@@ -11,7 +11,7 @@ keypoints:
 -   "Set up a PAT to enable cloning, pushing, pulling with HTTP and save PAT to credential manager to avoid re-entering for every cloning, pushing, or pulling process."
 ---
 
-## Create Personal Access Token (PAT)
+# Create Personal Access Token (PAT)
 As an alternative to SSH, repositories can also be cloned / data can be pushed to repositories using HTTP in combination with a PAT.
 
 Since 31/08/2021, you cannot clone your/a repository or push to a repository using your GitHub password in combination with HTTP, but you need to use a so-called Personal Access Token, referred to as PAT. Therefore, once you have created your GitHub account you will need to create a PAT, which will function as your password when logging in from the command line interface (CLI).
@@ -34,11 +34,13 @@ Copy your token from your screen, and keep it somewhere safe, as you will need y
 
 A good solution to keep the PAT safe and not have to re-enter it with every clone, push, or pull process is to use a credential/password manager. There are several options to approach this.
 
-## Options to keep PAT safe using a password manager
+# Options to keep PAT safe using a password manager
 There are different password managers to use depending on your machine (Linux / Windows / Mac).
 
-# Windows
+## Windows
 For Windows machines (also when Git is used via the Linux subsystem), the best option is to use the built-in Credential Manager.
+
+### Option 1: Windows Credential Manager
 
 Open the **Credential Manager**, then click on **Windows Credentials** and **Add a generic credential**.
 Alternatively, use the following path: Control Panel\All Control Panel Items\Credential Manager\Add a Generic Credential
@@ -48,12 +50,17 @@ You should see the below screen on your machine and enter the network address as
 
 Note: This should then work for most machines, when accessing Git through the CLI (Linux subsystem), as then credentials are automatically retrieved and don't need to be entered manually at every clone, push, or pull operation.
 
+### Option 2: Git Credential Manager (with GitBash / Git for Windows)
+
 Another option for Windows, is to use the Git Credential Manager for Windows (GCM). The GCM can be automatically installed when installing GitBash (Git for Windows).
-More information about the GCM can be found on the [website](http://microsoft.github.io/Git-Credential-Manager-for-Windows/Docs/CredentialManager.html).
-When installing Git for Windows, the credential manager is often automatically installed, or can be ticked during installation.
+When installing Git for Windows, the credential manager can be automatically installed during installation.
+
+--> screenshot
+
+Here you can find additional [Instructions for GCM](https://github.com/GitCredentialManager/git-credential-manager) from the official GitHub Repository.
 
 
-[Instructions for GCM](https://github.com/GitCredentialManager/git-credential-manager)
+
 
 
 
