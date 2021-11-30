@@ -20,11 +20,12 @@ You can create a PAT for GitHub in your [account settings](https://github.com/se
 
 Accessing the link should lead to the following prompt, if you are setting up your PAT for the first time. The screen looks slightly different, if you already created a PAT before and are renewing your PAT.
 
-![Generate new Token](../fig/generate_new_token.png)
+![Generate new Token](../fig/generate-PAT.JPG)
 
 Click on generate new token, and add the following details on the subsequent page:
 
-![New PAT selection](../fig/new-PAT-selection.JPG)
+![New PAT selection 1](../fig/PAT-sel-menu-1.png)
+![New PAT selection 1](../fig/PAT-sel-menu-2.png)
 
 Click on generate token on the bottom of the page.
 
