@@ -55,34 +55,33 @@ You should see the below screen on your machine and enter the network address as
 
 Note: This should then work for most machines, when accessing Git through the CLI (Linux subsystem), as then credentials are automatically retrieved and don't need to be entered manually at every clone, push, or pull operation.
 
+Note: if the above commands do not work for your Linux Subsystem, please try the commands outlined for a Linux Machine below.
+
 ### Option 2: Git Credential Manager (with GitBash / Git for Windows)
 
 Another option for Windows, is to use the Git Credential Manager for Windows (GCM). The GCM can be automatically installed when installing GitBash (Git for Windows).
 When installing Git for Windows, the credential manager can be automatically installed during installation.
 
-![GCM Installation GitBash](../fig/git-for-windows-CM.JPG)
+<img src="../fig/git-for-windows-CM.JPG" width="500">
 
 As a next step, you clone a repository or push to a repository and if it's the first attempt you will be prompted to the below window. You choose to login via "Token", and enter the PAT generated in the above steps.
 
-![GCM Login](../fig/token-gitforwindows.JPG)
+<img src="../fig/token-gitforwindows.JPG" width="500">
 
 The GCM via BitGash automatically stores the PAT, therefore the process only needs to be performed once. In future cloning, pushing, or pulling the PAT will be automatically retrieved using the GCM.
 
 Here you can find additional [Instructions for GCM](https://github.com/GitCredentialManager/git-credential-manager) from the official GitHub Repository.
 
-### Option 3: Git Credential Manager (without GitBash / Git for Windows)
-
-If you want to use the GCM via a Linux Subsystem, the steps are different from Option 2, as the GCM is not automatically installed.
-
 ## Linux
 The best way of storing your credentials on a Linux machine is by using libsecret. The installation and setup of libsecret can be performed with the following commands:
 
 ~~~
-sudo apt-get install libsecret-1-0 libsecret-1-dev
-cd /usr/share/doc/git/contrib/credential/libsecret
-sudo make
-git config --global credential.helper /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
+$ sudo apt-get install libsecret-1-0 libsecret-1-dev
+$ cd /usr/share/doc/git/contrib/credential/libsecret
+$ sudo make
+$ git config --global credential.helper /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
 ~~~
+{: .language-bash}
 
 You should only be prompted once to enter your username + password (PAT), and afterwards it is automatically stored and will be retrieved for every clone/push/pull command.
 
