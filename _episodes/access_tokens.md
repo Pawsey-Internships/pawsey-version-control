@@ -35,7 +35,12 @@ Copy your token from your screen, and keep it somewhere safe, as you will need y
 A good solution to keep the PAT safe and not have to re-enter it with every clone, push, or pull process is to use a credential/password manager. There are several options to approach this.
 
 # Options to keep PAT safe using a password manager
-There are different password managers to use depending on your machine (Linux / Windows / Mac).
+There are different password managers to use depending on your machine (Mac / Windows / Linux).
+
+## Mac
+When using a Mac, you need to copy your access token and use it when cloning a repository / pushing to a repository the first time after the PAT has been established. The PAT is then automatically added to the Mac Keychain Access app and there is no need to re-enter the PAT for future clone / push / pull actions.
+
+In the case that something needs to be adjusted/updated in the Mac Keychain Access app, these [instructions](https://docs.github.com/en/get-started/getting-started-with-git/updating-credentials-from-the-macos-keychain) are useful.
 
 ## Windows
 For Windows machines (also when Git is used via the Linux subsystem), the best option is to use the built-in Credential Manager.
@@ -46,7 +51,7 @@ Open the **Credential Manager**, then click on **Windows Credentials** and **Add
 Alternatively, use the following path: Control Panel\All Control Panel Items\Credential Manager\Add a Generic Credential
 You should see the below screen on your machine and enter the network address as below, your GitHub username as username, and your PAT as your password.
 
-![Windows Credential Manager](../fig/add-generic-credential.png)
+![Windows Credential Manager](../fig/add-generic-credential.JPG)
 
 Note: This should then work for most machines, when accessing Git through the CLI (Linux subsystem), as then credentials are automatically retrieved and don't need to be entered manually at every clone, push, or pull operation.
 
@@ -55,11 +60,11 @@ Note: This should then work for most machines, when accessing Git through the CL
 Another option for Windows, is to use the Git Credential Manager for Windows (GCM). The GCM can be automatically installed when installing GitBash (Git for Windows).
 When installing Git for Windows, the credential manager can be automatically installed during installation.
 
-![GCM Installation GitBash](../fig/git-for-windows-CM.png)
+![GCM Installation GitBash](../fig/git-for-windows-CM.JPG)
 
 As a next step, you clone a repository or push to a repository and if it's the first attempt you will be prompted to the below window. You choose to login via "Token", and enter the PAT generated in the above steps.
 
-![GCM Login](../fig/token-gitforwindows.png)
+![GCM Login](../fig/token-gitforwindows.JPG)
 
 The GCM via BitGash automatically stores the PAT, therefore the process only needs to be performed once. In future cloning, pushing, or pulling the PAT will be automatically retrieved using the GCM.
 
@@ -69,6 +74,17 @@ Here you can find additional [Instructions for GCM](https://github.com/GitCreden
 
 If you want to use the GCM via a Linux Subsystem, the steps are different from Option 2, as the GCM is not automatically installed.
 
+## Linux
+The best way of storing your credentials on a Linux machine is by using libsecret. The installation and setup of libsecret can be performed with the following commands:
+
+~~~
+sudo apt-get install libsecret-1-0 libsecret-1-dev
+cd /usr/share/doc/git/contrib/credential/libsecret
+sudo make
+git config --global credential.helper /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
+~~~
+
+You should only be prompted once to enter your username + password (PAT), and afterwards it is automatically stored and will be retrieved for every clone/push/pull command.
 
 
 
