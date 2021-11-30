@@ -24,11 +24,11 @@ Accessing the link should lead to the following prompt, if you are setting up yo
 
 Click on generate new token, and add the following details on the subsequent page:
 
---> screenshot
+![New PAT selection](../fig/new-PAT-selection.jpeg)
 
 Click on generate token on the bottom of the page.
 
---> screenshot
+![New token finalised](../fig/git-CM-final-step.png)
 
 Copy your token from your screen, and keep it somewhere safe, as you will need your token to login to GitHub from the CLI. It is important to copy/safe the PAT immediately, as it cannot be seen/accessed on GitHub anymore, once the above window is closed.
 
@@ -68,7 +68,7 @@ As a next step, you clone a repository or push to a repository and if it's the f
 
 <img src="../fig/token-gitforwindows.JPG" width="500">
 
-The GCM via BitGash automatically stores the PAT, therefore the process only needs to be performed once. In future cloning, pushing, or pulling the PAT will be automatically retrieved using the GCM.
+The GCM via GitBash automatically stores the PAT, therefore the process only needs to be performed once. In future cloning, pushing, or pulling the PAT will be automatically retrieved using the GCM.
 
 Here you can find additional [Instructions for GCM](https://github.com/GitCredentialManager/git-credential-manager) from the official GitHub Repository.
 
