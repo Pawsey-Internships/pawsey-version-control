@@ -24,7 +24,7 @@ Accessing the link should lead to the following prompt, if you are setting up yo
 
 Click on generate new token, and add the following details on the subsequent page:
 
-![New PAT selection](../fig/new-PAT-selection.jpeg)
+![New PAT selection](../fig/new-PAT-selection.JPG)
 
 Click on generate token on the bottom of the page.
 
