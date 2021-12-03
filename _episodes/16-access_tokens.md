@@ -44,23 +44,11 @@ When using a Mac, you need to copy your access token and use it when cloning a r
 In the case that something needs to be adjusted/updated in the Mac Keychain Access app, these [instructions](https://docs.github.com/en/get-started/getting-started-with-git/updating-credentials-from-the-macos-keychain) are useful.
 
 ## Windows
-For Windows machines (also when Git is used via the Linux subsystem), the best option is to use the built-in Credential Manager.
+For Windows machines (also when Git is used via the Linux subsystem), the best option is to use the Git Credential Manager (GCM).
 
-### Option 1: Windows Credential Manager
+### Option 1: Git Credential Manager with GitBash / Git for Windows
 
-Open the **Credential Manager**, then click on **Windows Credentials** and **Add a generic credential**.
-Alternatively, use the following path: Control Panel\All Control Panel Items\Credential Manager\Add a Generic Credential
-You should see the below screen on your machine and enter the network address as below, your GitHub username as username, and your PAT as your password.
-
-![Windows Credential Manager](../fig/add-generic-credential.JPG)
-
-Note: This should then work for most machines, when accessing Git through the CLI (Linux subsystem), as then credentials are automatically retrieved and don't need to be entered manually at every clone, push, or pull operation.
-
-Note: if the above commands do not work for your Linux Subsystem, please try the commands outlined for a Linux Machine below.
-
-### Option 2: Git Credential Manager (with GitBash / Git for Windows)
-
-Another option for Windows, is to use the Git Credential Manager for Windows (GCM). The GCM can be automatically installed when installing GitBash (Git for Windows).
+The GCM can be automatically installed when installing GitBash (Git for Windows).
 When installing Git for Windows, the credential manager can be automatically installed during installation.
 
 <img src="../fig/git-for-windows-CM.JPG" width="500">
@@ -73,22 +61,43 @@ The GCM via GitBash automatically stores the PAT, therefore the process only nee
 
 Here you can find additional [Instructions for GCM](https://github.com/GitCredentialManager/git-credential-manager) from the official GitHub Repository.
 
+### Option 2: Git Credential Manager with WSL
+
+If you have GitBash installed on your Windows Machine and want to use GitHub via your WSL terminal, please follow the instructions outlined in Option 2a. Otherwise, please follow the instructions outlined for a Linux machine.
+
+#### Option 2a: Git Credential Manager with WSL with GitBash previously installed
+
+Open the **Credential Manager**, then click on **Windows Credentials** and **Add a generic credential**.
+Alternatively, use the following path: Control Panel\All Control Panel Items\Credential Manager\Add a Generic Credential
+You should see the below screen on your machine and enter the network address as below, your GitHub username as username, and your PAT as your password.
+
+![Windows Credential Manager](../fig/add-generic-credential.JPG)
+
+Note: This should then work for most machines, when accessing Git through WSL, as then credentials are automatically retrieved and don't need to be entered manually at every clone, push, or pull operation.
+
+Please as a last step type the following in your command line to link your WSL terminal to your GCM installation:
+~~~
+$ git config --global credential.helper /mnt/c/Program\ Files/Git/mingw64/libexec/git-core/git-credential-manager.exe
+~~~
+
+Depending on your downloaded version, the path might alternatively be: /mnt/c/Program\ Files/Git/mingw64/libexec/git-core/git-credential-manager-core.exe
+
+
 ## Linux
-The best way of storing your credentials on a Linux machine is by using libsecret. The installation and setup of libsecret can be performed with the following commands:
+The best way of storing your credentials on a Linux machine is by using the GCM. On a Linux machine you can download and install the GCM using the following commands.
 
 ~~~
-$ sudo apt-get install libsecret-1-0 libsecret-1-dev
-$ cd /usr/share/doc/git/contrib/credential/libsecret
-$ sudo make
-$ git config --global credential.helper /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
+$ curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
+
+$ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+
+$ sudo apt updat
+
+$ sudo apt install gh
 ~~~
 {: .language-bash}
 
-You should only be prompted once to enter your username + password (PAT), and afterwards it is automatically stored and will be retrieved for every clone/push/pull command.
-
-
-
-
-
-
+In the command line, enter gh auth login, then follow the prompts.
+-   When prompted for your preferred protocol for Git operations, select HTTPS.
+-   When asked if you would like to authenticate to Git with your GitHub credentials, enter Y.
 
