@@ -1,9 +1,10 @@
 ---
-title: Addition - Setting up PAT to use HTTP
+title: Using Git with a GitHub Account
 teaching: 10
 exercises: 0
 questions:
 - "How can I use Git to push commits to a GitHub repository?"
+- "How can I use Git to clone a private to a GitHub repository?"
 objectives:
 - "Create a GitHub Personal Access Token (PAT)".
 - "Store the PAT in a credential or password manager for future access."
