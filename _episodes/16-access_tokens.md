@@ -3,101 +3,99 @@ title: Addition - Setting up PAT to use HTTP
 teaching: 10
 exercises: 0
 questions:
-- "How do I get set up to use PAT as password for Git when using HTTP?"
+- "How can I use Git to push commits to a GitHub repository?"
 objectives:
-- "Set up a PAT online configuring Git."
-- "Store the PAT in a credential/password manager for future access."
+- "Create a GitHub Personal Access Token (PAT)".
+- "Store the PAT in a credential or password manager for future access."
 keypoints:
--   "Set up a PAT to enable cloning, pushing, pulling with HTTP and save PAT to credential manager to avoid re-entering for every cloning, pushing, or pulling process."
+-   "Set up a PAT to enable pushing with Git to a GitHub repository using HTTPS and save the PAT to a credential manager to avoid re-entry with every push request."
 ---
 
-# Create Personal Access Token (PAT)
-As an alternative to SSH, repositories can also be cloned / data can be pushed to repositories using HTTP in combination with a PAT.
+# Create a Personal Access Token (PAT) for your GitHub Account
 
-Since 31/08/2021, you cannot clone your/a repository or push to a repository using your GitHub password in combination with HTTP, but you need to use a so-called Personal Access Token, referred to as PAT. Therefore, once you have created your GitHub account you will need to create a PAT, which will function as your password when logging in from the command line interface (CLI).
+Since 31/08/2021,  Git cannot clone a private GitHub repository or push to a GitHub repository using only a GitHub user name and password. In place of your password, you are required to use a Personal Access Token (PAT) that is created by the GitHub account that owns the remote repository or a GitHub account that has been invited to the repository as a collaborator.
 
-You can create a PAT for GitHub in your [account settings](https://github.com/settings/tokens/).
+Personal Access Tokens are unique. Therefore, once you have created your GitHub account, you will need to create a PAT, which will function as your password when logging in from the command-line interface (CLI). 
 
-Accessing the link should lead to the following prompt, if you are setting up your PAT for the first time. The screen looks slightly different, if you already created a PAT before and are renewing your PAT.
+You can create a PAT for GitHub in your account settings. If you are logged into a GitHub account, [this link](https://github.com/settings/tokens/) will take you to your PAT management page, Otherwise:
+
+1. Navigate to https://github.com and log into your GitHub account.
+2. In the top-right of the browser window, click on your user icon to open a drop-down menu and select 'Settings. 
+3. From the 'Public Profile Page,' select 'Developer Settings' from the 'Account Settings' menu. 
+4. From the 'GitHub Apps' page, select 'Personal Access Tokens'. 
+
+The Personal Access Tokens page is shown below. Your screen will look slightly different if you have already created a PAT.
 
 ![Generate new Token](../fig/generate-PAT.JPG)
 
-Click on generate new token, and add the following details on the subsequent page:
+Click on 'generate new token' (you will be asked to re-enter your password), and add the following details: < on the subsequent page: >
 
 ![New PAT selection 1](../fig/PAT-sel-menu-1.png)
 ![New PAT selection 1](../fig/PAT-sel-menu-2.png)
 
-Click on generate token on the bottom of the page.
+On the bottom of the page, select 'generate token.' 
 
 ![New token finalised](../fig/git-CM-final-step.png)
 
-Copy your token from your screen, and keep it somewhere safe, as you will need your token to login to GitHub from the CLI. It is important to copy/safe the PAT immediately, as it cannot be seen/accessed on GitHub anymore, once the above window is closed.
+Copy your token from your screen, and keep it somewhere safe you will not be able to access it on GitHub once the above window is closed.
 
-A good solution to keep the PAT safe and not have to re-enter it with every clone, push, or pull process is to use a credential/password manager. There are several options to approach this.
+# Securly Storing Your Personal Access Token
 
-# Options to keep PAT safe using a password manager
-There are different password managers to use depending on your machine (Mac / Windows / Linux).
+A good solution to keep the PAT safe and not have to re-enter it with every 'git push' is to use a credential/password manager.
 
-## Mac
-When using a Mac, you need to copy your access token and use it when cloning a repository / pushing to a repository the first time after the PAT has been established. The PAT is then automatically added to the Mac Keychain Access app and there is no need to re-enter the PAT for future clone / push / pull actions.
+## MacOS
+When you first push to a public GitHub repository or clone a private GitHub repository, you will be asked for a username and password. Provide your GitHub account username as the username and the PAT as the password. Once Git has successfully connected with the remote repository, the PAT will be automatically added to the Mac Keychain Access app. After this, there is no need to re-enter the PAT for future clone, push or pull actions.
 
-In the case that something needs to be adjusted/updated in the Mac Keychain Access app, these [instructions](https://docs.github.com/en/get-started/getting-started-with-git/updating-credentials-from-the-macos-keychain) are useful.
+If you need to update the credentials stored in the Mac Keychain Access app, these [instructions](https://docs.github.com/en/get-started/getting-started-with-git/updating-credentials-from-the-macos-keychain) are useful.
 
 ## Windows
-For Windows machines (also when Git is used via the Linux subsystem), the best option is to use the Git Credential Manager (GCM).
 
-### Option 1: Git Credential Manager with GitBash / Git for Windows
-
-The GCM can be automatically installed when installing GitBash (Git for Windows).
-When installing Git for Windows, the credential manager can be automatically installed during installation.
+For Windows, the recommended option is to use the Git Credential Manager (GCM), which is included with GitBash (Git for Windows).
 
 <img src="../fig/git-for-windows-CM.JPG" width="500">
 
-As a next step, you clone a repository or push to a repository and if it's the first attempt you will be prompted to the below window. You choose to login via "Token", and enter the PAT generated in the above steps.
+When you first push to a public GitHub repository, or clone a private GitHub repository, you will be prompted by the below window. Choose to login via "Token", and enter your PAT.
 
 <img src="../fig/token-gitforwindows.JPG" width="500">
 
-The GCM via GitBash automatically stores the PAT, therefore the process only needs to be performed once. In future cloning, pushing, or pulling the PAT will be automatically retrieved using the GCM.
+The GCM via GitBash automatically stores the entered PAT. In future cloning, pushing, or pulling the PAT will be automatically retrieved using the GCM.
 
 Here you can find additional [Instructions for GCM](https://github.com/GitCredentialManager/git-credential-manager) from the official GitHub Repository.
 
-### Option 2: Git Credential Manager with WSL
+# Windows Subsystem for Linux (Ubuntu)
 
-If you have GitBash installed on your Windows Machine and want to use GitHub via your WSL terminal, please follow the instructions outlined in Option 2a. Otherwise, please follow the instructions outlined for a Linux machine.
+Follow the instructions given in the **Linux (Ubuntu)** section below or, if you have saved your GitHub username and PAT in Windows using the Git Credential Manager (see the **Windows** above); you can choose to link these credentials to Git in the WSL as follows.  
 
-#### Option 2a: Git Credential Manager with WSL with GitBash previously installed
+In Windows, naviagte to Control Panel > All Control Panel Items > **Credential Manager** > Add a Generic Credential. Click on **Windows Credentials** and **Add a generic credential**.
 
-Open the **Credential Manager**, then click on **Windows Credentials** and **Add a generic credential**.
-Alternatively, use the following path: Control Panel\All Control Panel Items\Credential Manager\Add a Generic Credential
-You should see the below screen on your machine and enter the network address as below, your GitHub username as username, and your PAT as your password.
+
+You should see the screen below. 
 
 ![Windows Credential Manager](../fig/add-generic-credential.JPG)
 
-Note: This should then work for most machines, when accessing Git through WSL, as then credentials are automatically retrieved and don't need to be entered manually at every clone, push, or pull operation.
+Enter the network address (as shown above), your GitHub username, and your PAT as the password.
 
-Please as a last step type the following in your command line to link your WSL terminal to your GCM installation:
+From with the WSL use the following command to link your WSL Git installation to your GCM installation on Windows:
 ~~~
 $ git config --global credential.helper /mnt/c/Program\ Files/Git/mingw64/libexec/git-core/git-credential-manager.exe
 ~~~
 
-Depending on your downloaded version, the path might alternatively be: /mnt/c/Program\ Files/Git/mingw64/libexec/git-core/git-credential-manager-core.exe
+Note: Depending on how you installed the GCM, the path might alternatively be: /mnt/c/Program\ Files/Git/mingw64/libexec/git-core/git-credential-manager-core.exe
 
+## Linux (Ubuntu)
 
-## Linux
-The best way of storing your credentials on a Linux machine is by using the GCM. On a Linux machine you can download and install the GCM using the following commands.
+Linux (Ubuntu) users are recommended to use the GitHub Command Line Interface (GitHub CLI).
 
 ~~~
 $ curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
 
 $ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
 
-$ sudo apt updat
+$ sudo apt update
 
 $ sudo apt install gh
 ~~~
 {: .language-bash}
 
-In the command line, enter gh auth login, then follow the prompts.
--   When prompted for your preferred protocol for Git operations, select HTTPS.
--   When asked if you would like to authenticate to Git with your GitHub credentials, enter Y.
+Enter 'gh auth login' and follow the prompts. When prompted for your preferred protocol for Git operations, select HTTPS and, when asked if you would like to authenticate to Git with your GitHub credentials, enter Y.
 
