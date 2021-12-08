@@ -1,5 +1,5 @@
-Software Version Control with Git
-=================================
+Version Control with Git
+========================
 
 An introduction to version control for novices using Git.
 Please see <https://pawsey-internships.github.io/version-control/> for a rendered version of this material.
