@@ -16,8 +16,6 @@ keypoints:
 
 Since 31/08/2021,  Git cannot clone a private GitHub repository or push to a GitHub repository using only a GitHub user name and password. In place of your password, you are required to use a Personal Access Token (PAT) that is created by the GitHub account that owns the remote repository or a GitHub account that has been invited to the repository as a collaborator.
 
-Personal Access Tokens are unique. Therefore, once you have created your GitHub account, you will need to create a PAT, which will function as your password when logging in from the command-line interface (CLI). 
-
 You can create a PAT for GitHub in your account settings. If you are logged into a GitHub account, [this link](https://github.com/settings/tokens/) will take you to your PAT management page, Otherwise:
 
 1. Navigate to https://github.com and log into your GitHub account.
@@ -29,7 +27,7 @@ The Personal Access Tokens page is shown below. Your screen will look slightly d
 
 ![Generate new Token](../fig/generate-PAT.JPG)
 
-Click on 'generate new token' (you will be asked to re-enter your password), and add the following details: < on the subsequent page: >
+Click on 'generate new token' (you will be asked to re-enter your password), and add the following details: 
 
 ![New PAT selection 1](../fig/PAT-sel-menu-1.png)
 ![New PAT selection 1](../fig/PAT-sel-menu-2.png)
@@ -42,10 +40,10 @@ Copy your token from your screen, and keep it somewhere safe you will not be abl
 
 # Securly Storing Your Personal Access Token
 
-A good solution to keep the PAT safe and not have to re-enter it with every 'git push' is to use a credential/password manager.
+As a PAT is used in place of your password by default it will need to be re-entered whenever you push to the remote GitHub repository.
 
 ## MacOS
-When you first push to a public GitHub repository or clone a private GitHub repository, you will be asked for a username and password. Provide your GitHub account username as the username and the PAT as the password. Once Git has successfully connected with the remote repository, the PAT will be automatically added to the Mac Keychain Access app. After this, there is no need to re-enter the PAT for future clone, push or pull actions.
+When you first push to the GitHub repository, you will be asked for a username and password. Provide your GitHub account username as the username and the PAT as the password. Once Git has successfully connected with the remote repository, the PAT will be automatically added to the Mac Keychain Access app. After this, there is no need to re-enter the PAT for future clone, push or pull actions.
 
 If you need to update the credentials stored in the Mac Keychain Access app, these [instructions](https://docs.github.com/en/get-started/getting-started-with-git/updating-credentials-from-the-macos-keychain) are useful.
 
