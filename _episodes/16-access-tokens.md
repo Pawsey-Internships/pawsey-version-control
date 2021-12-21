@@ -6,7 +6,7 @@ questions:
 - "How can I use Git to push commits to a GitHub repository?"
 - "How can I use Git to clone a private to a GitHub repository?"
 objectives:
-- "Create a GitHub Personal Access Token (PAT)".
+- "Create a GitHub Personal Access Token (PAT)."
 - "Store the PAT in a credential or password manager for future access."
 keypoints:
 - "Set up a PAT to enable pushing with Git to a GitHub repository using HTTPS and save the PAT to a credential manager to avoid re-entry with every push request."
