@@ -9,7 +9,7 @@ objectives:
 - "Create a GitHub Personal Access Token (PAT)".
 - "Store the PAT in a credential or password manager for future access."
 keypoints:
--   "Set up a PAT to enable pushing with Git to a GitHub repository using HTTPS and save the PAT to a credential manager to avoid re-entry with every push request."
+- "Set up a PAT to enable pushing with Git to a GitHub repository using HTTPS and save the PAT to a credential manager to avoid re-entry with every push request."
 ---
 
 # Create a Personal Access Token (PAT) for your GitHub Account
