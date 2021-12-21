@@ -98,3 +98,22 @@ $ sudo apt install gh
 
 Enter 'gh auth login' and follow the prompts. When prompted for your preferred protocol for Git operations, select HTTPS and, when asked if you would like to authenticate to Git with your GitHub credentials, enter Y.
 
+## Pawsey Supercomputer (Topaz / Magnus)
+
+Magnus and/or Topaz users, are recommended to use the GitHub Command Line Interface (GitHub CLI).
+
+~~~
+$ VERSION=2.3.0
+
+$ curl -sSL https://github.com/cli/cli/releases/download/v${VERSION}/gh_${VERSION}_linux_amd64.tar.gz -o gh_${VERSION}_linux_amd64.tar.gz
+
+$ tar xvf gh_${VERSION}_linux_amd64.tar.gz
+
+$ cd gh_${VERSION}_linux_amd64/bin
+
+$ ./gh auth login 
+~~~
+{: .language-bash}
+
+Please then follow the prompts. When prompted for your preferred protocol for Git operations, select HTTPS and, when asked if you would like to authenticate to Git with your GitHub credentials, enter Y.
+
