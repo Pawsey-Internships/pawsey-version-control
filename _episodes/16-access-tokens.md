@@ -98,9 +98,9 @@ $ sudo apt install gh
 
 Enter 'gh auth login' and follow the prompts. When prompted for your preferred protocol for Git operations, select HTTPS and, when asked if you would like to authenticate to Git with your GitHub credentials, enter Y.
 
-## Pawsey Supercomputer (Topaz / Magnus)
+## Pawsey Supercomputers (Topaz / Magnus)
 
-Magnus and/or Topaz users, are recommended to use the GitHub Command Line Interface (GitHub CLI).
+Magnus and/or Topaz users, are recommended to use the GitHub Command Line Interface (GitHub CLI). Create a folder under your $MYGROUP directory (e.g. 'my_software'), change into that directory and carry our the following commands.
 
 ~~~
 $ VERSION=2.3.0
@@ -117,3 +117,18 @@ $ ./gh auth login
 
 Please then follow the prompts. When prompted for your preferred protocol for Git operations, select HTTPS and, when asked if you would like to authenticate to Git with your GitHub credentials, enter Y.
 
+If you would like to use the 'gh' command without having to provide the full path to the 'gh' binary file, you can create an alias in your '~/.bashrc' (or $HOME/.bashrc) file. Open the '.bashrc' file in your terminal-based text-editor of choice and add the following to the bottom of the file.
+
+~~~
+alias gh="./$MYGROUP/<software directory>/gh_<VERSION>_linux_amd64/bin/gh"
+~~~
+{: .language-bash}
+
+Where <software directory> is the previous created directory and <VERSION> is the version of the GitHub Command Line Interface you downloaded (2.3.0 in the  example above). To make the alias active in your current terminal session, source '~/.bashrc'.
+
+~~~
+$ . ~/.bashrc
+~~~
+{: .language-bash}
+
+On Magnus, '~/.bashrc' is sourced automatically when the user logs in. On Topaz, it will need to sourced manually as shown above. 
