@@ -78,6 +78,7 @@ From with the WSL use the following command to link your WSL Git installation to
 ~~~
 $ git config --global credential.helper /mnt/c/Program\ Files/Git/mingw64/libexec/git-core/git-credential-manager.exe
 ~~~
+{: .language-bash}
 
 Note: Depending on how you installed the GCM, the path might alternatively be: /mnt/c/Program\ Files/Git/mingw64/libexec/git-core/git-credential-manager-core.exe
 
@@ -131,4 +132,4 @@ $ . ~/.bashrc
 ~~~
 {: .language-bash}
 
-On Magnus, '~/.bashrc' is sourced automatically when the user logs in. On Topaz, it will need to sourced manually as shown above. 
+On Magnus, '~/.bashrc' is sourced automatically when the user logs in. On Topaz, it will need to be sourced manually as shown above. 
