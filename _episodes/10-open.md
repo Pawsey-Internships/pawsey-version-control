@@ -73,12 +73,25 @@ by acting as a shareable electronic lab notebook for computational work:
 > [the later episode on Citation]({{ page.root }}{% link _episodes/12-citation.md %}).
 {: .callout}
 
+> ## Preprint servers
+>
+> Preprint servers like [arXiv](https://arxiv.org/) are now a popular way for researchers
+> to share their papers freely with the academic community. In some cases these are even
+> replacing traditional, subscription-based journals. If you're at the stage of publishing a
+> paper though, be sure to check the guidelines of the journal you want to submit to, and 
+> ask around in your discipline to find out whether there are any restrictions on when and
+> how you submit to a preprint server.
+{: .callout}
+
 > ## How to Find an Appropriate Data Repository?
 >
 > Surf the internet for a couple of minutes and check out the data repositories
 > mentioned above: [Figshare](https://figshare.com/), [Zenodo](https://zenodo.org),
-> [Dryad](https://datadryad.org/). Depending on your field of research, you might
-> find community-recognized repositories that are well-known in your field.
+> [Dryad](https://datadryad.org/). Others like [OpenDataRepository](https://www.opendatarepository.org)
+> are also a popular choice. Depending on your field of research, you might
+> find community-recognized repositories that are well-known in your field, especially
+> by looking at [journal](https://journals.plos.org/plosone/s/recommended-repositories)
+>  [recommendations](https://authorservices.taylorandfrancis.com/data-sharing/share-your-data/repositories/).
 > You might also find useful [these data repositories recommended by Nature](
 > https://www.nature.com/sdata/data-policies/repositories).
 > Discuss with your neighbor which data repository you might want to
