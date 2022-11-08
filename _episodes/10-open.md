@@ -26,31 +26,23 @@ However, a growing number of scientists are making use of <b> open access reposi
 to share every element of their publication, from the paper, to the code, to the data. Now,
 a truly open workflow might look something like this:
 
-*   The data that the scientist collects is stored in an open access repository
+*   The data is stored in an open access repository
     like [figshare](https://figshare.com/) or
     [Zenodo](https://zenodo.org), possibly as soon as it's collected,
     and given its own
     [Digital Object Identifier](https://en.wikipedia.org/wiki/Digital_object_identifier) (DOI).
     Or the data was already published and is stored in
     [Dryad](https://datadryad.org/).
-*   The scientist creates a new repository on GitHub to hold her work.
-*   As she does her analysis,
-    she pushes changes to her scripts
-    (and possibly some output files)
-    to that repository.
-    She also uses the repository for her paper;
-    that repository is then the hub for collaboration with her colleagues.
-*   When she's happy with the state of her paper,
-    she posts a version to [arXiv](https://arxiv.org/)
-    or some other preprint server
-    to invite feedback from peers.
-*   Based on that feedback,
-    she may post several revisions
-    before finally submitting her paper to a journal.
-*   The published paper includes links to her preprint
-    and to her code and data repositories,
+*   Code (and potentiall some output) is stored in a dedicated repository on GitHub, GitLab or 
+    Bitbucket, which is kept up to date throughout the analysis process.
+*   The paper draft is also kept in a repository, or, if using LaTeX, on [Overleaf](https://www.overleaf.com/), 
+    so that there is a hub for collaboration with colleagues and co-authors.
+*   When the paper is ready, it is posted to a preprint server like [arXiv](https://arxiv.org/), 
+    and also submitted it to a journal of choice.
+*   The published paper includes links to the preprint, code and data repositories,
     which  makes it much easier for other scientists
-    to use her work as starting point for their own research.
+    to use the work as starting point for their own research.
+
 
 This open model accelerates discovery:
 the more open work is,
