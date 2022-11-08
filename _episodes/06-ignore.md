@@ -9,6 +9,7 @@ objectives:
 - "Explain why ignoring files can be useful."
 keypoints:
 - "The `.gitignore` file tells Git what files to ignore."
+- "The `.gitconfig` file tells Git how to behave"
 ---
 
 What if we have files that we do not want Git to track for us,
@@ -330,3 +331,25 @@ nothing to commit, working directory clean
 > > 3. track `log_01` using   `git add -f log_01`
 > {: .solution}
 {: .challenge}
+
+> ## `.gitconfig`
+> The command `git config` is used to set Git configuration values on a global or local project level which correspond to `.gitconfig` text files.
+> Executing `git config` like we did in setup will modify a configuration text file.
+> Here is an example global `.gitconfig` file which we created from `git config --global`:
+> ~~~
+> [user]
+> 	email = Vlad Dracula
+> 	name = vlad@tran.sylvan.ia
+> [pull]
+> 	rebase = true
+> [credential]
+> 	helper = manager-core
+> 	helper = /usr/bin/git-credential-manager-core
+> 	credentialStore = gpg
+> [github]
+> 	user = vladDracula
+> ~~~
+> {: .language-bash}
+> But like `.gitignore` they can be added at a project level for specific behavours such as in the example above where we are
+> telling git to use the rebase merge strategy instead of fast forward merge.
+{: .callout}
