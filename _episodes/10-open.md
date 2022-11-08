@@ -17,33 +17,14 @@ keypoints:
 {: .quotation}
 
 Free sharing of information might be the ideal in science,
-but the reality is often more complicated.
-Normal practice today looks something like this:
+but publication practices sometimes make this difficult. Typically, journals don't 
+require authors to submit their code, and only some require the actual data used in 
+a paper. Add to that the fact that many papers sit behind a paywall and all of a sudden
+the information doesn't seem so open.
 
-*   A scientist collects some data and stores it on a machine
-    that is occasionally backed up by her department.
-*   She then writes or modifies a few small programs
-    (which also reside on her machine)
-    to analyze that data.
-*   Once she has some results,
-    she writes them up and submits her paper.
-    She might include her data -- a growing number of journals require this -- but
-    she probably doesn't include her code.
-*   Time passes.
-*   The journal sends her reviews written anonymously by a handful of other people in her field.
-    She revises her paper to satisfy them,
-    during which time she might also modify the scripts she wrote earlier,
-    and resubmits.
-*   More time passes.
-*   The paper is eventually published.
-    It might include a link to an online copy of her data,
-    but the paper itself will be behind a paywall:
-    only people who have personal or institutional access
-    will be able to read it.
-
-For a growing number of scientists,
-though,
-the process looks like this:
+However, a growing number of scientists are making use of <b> open access repositories </b>
+to share every element of their publication, from the paper, to the code, to the data. Now,
+a truly open workflow might look something like this:
 
 *   The data that the scientist collects is stored in an open access repository
     like [figshare](https://figshare.com/) or
@@ -99,14 +80,6 @@ by acting as a shareable electronic lab notebook for computational work:
 > etc.) can be turned into a citable object. You'll learn how to do this in
 > [the later episode on Citation]({{ page.root }}{% link _episodes/12-citation.md %}).
 {: .callout}
-
-> ## How Reproducible Is My Work?
->
-> Ask one of your labmates to reproduce a result you recently obtained
-> using only what they can find in your papers or on the web.
-> Try to do the same for one of their results,
-> then try to do it for a result from a lab you work with.
-{: .challenge}
 
 > ## How to Find an Appropriate Data Repository?
 >
