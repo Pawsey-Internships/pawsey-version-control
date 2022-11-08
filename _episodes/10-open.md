@@ -33,8 +33,8 @@ a truly open workflow might look something like this:
     [Digital Object Identifier](https://en.wikipedia.org/wiki/Digital_object_identifier) (DOI).
     Or the data was already published and is stored in
     [Dryad](https://datadryad.org/).
-*   Code (and potentiall some output) is stored in a dedicated repository on GitHub, GitLab or 
-    Bitbucket, which is kept up to date throughout the analysis process.
+*   Code (and potentiall some output) is stored in a dedicated repository on [GitHub](https://github.com), 
+    [Bitbucket](https://bitbucket.org) or similar, which is kept up to date throughout the analysis process.
 *   The paper draft is also kept in a repository, or, if using LaTeX, on [Overleaf](https://www.overleaf.com/), 
     so that there is a hub for collaboration with colleagues and co-authors.
 *   When the paper is ready, it is posted to a preprint server like [arXiv](https://arxiv.org/), 
