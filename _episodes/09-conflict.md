@@ -162,29 +162,34 @@ Automatic merge failed; fix conflicts and then commit the result.
 ~~~
 {: .output}
 
-The `git pull` command updates the local repository to include those
-changes already included in the remote repository.
-After the changes from remote branch have been fetched, Git detects that changes made to the local copy 
-overlap with those made to the remote repository, and therefore refuses to merge the two versions to
-stop us from trampling on our previous work. The conflict is marked in
-in the affected file:
 
-~~~
-$ cat mars.txt
-~~~
-{: .language-bash}
-
-~~~
-Cold and dry, but everything is my favorite color
-The two moons may be a problem for Wolfman
-But the Mummy will appreciate the lack of humidity
-<<<<<<< HEAD
-We added a different line in the other copy
-=======
-This line added to Wolfman's copy
->>>>>>> dabb4c8c450e8475aee9b14b4383acc99f42af1d
-~~~
-{: .output}
+> ## What a conflict actually looks like
+>
+> The `git pull` command updates the local repository to include those
+> changes already included in the remote repository.
+> After the changes from remote branch have been fetched, Git detects that changes made to the local copy 
+> overlap with those made to the remote repository, and therefore refuses to merge the two versions to
+> stop us from trampling on our previous work. The conflict is marked in
+> in the affected file:
+>
+> ~~~
+> $ cat mars.txt
+> ~~~
+> {: .language-bash}
+>
+> ~~~
+> Cold and dry, but everything is my favorite color
+> The two moons may be a problem for Wolfman
+> But the Mummy will appreciate the lack of humidity
+> <<<<<<< HEAD
+> We added a different line in the other copy
+> =======
+> This line added to Wolfman's copy
+> >>>>>>> dabb4c8c450e8475aee9b14b4383acc99f42af1d
+> ~~~
+> {: .error}
+> Most editors will have special highlighting for git conflicts which mades identification more easy. 
+{: .callout}
 
 Our change is preceded by `<<<<<<< HEAD`.
 Git has then inserted `=======` as a separator between the conflicting changes
