@@ -126,13 +126,7 @@ SSH uses what is called a key pair. This is two keys that work together to valid
 
 You can think of the public key as a padlock, and only you have the key (the private key) to open it. You use the public key where you want a secure method of communication, such as your GitHub account.  You give this padlock, or public key, to GitHub and say “lock the communications to my account with this so that only computers that have my private key can unlock communications and send git commands as my GitHub account.”  
 
-What we will do now is the minimum required to set up the SSH keys and add the public key to a GitHub account.
-
-> ## Advanced SSH
-> A supplemental episode in this lesson discusses SSH and key pairs in more depth and detail. 
-{: .callout}
-
-The first thing we are going to do is check if this has already been done on the computer you’re on.  Because generally speaking, this setup only needs to happen once and then you can forget about it. 
+What we will do now is the minimum required to set up the SSH keys and add the public key to a GitHub account, starting with checking if this has already been done on the computer you’re on. Generally speaking, this setup only needs to happen once and then you can forget about it. 
 
 > ## Keeping your keys secure
 > You shouldn't really forget about your SSH keys, since they keep your account secure. It’s good 
