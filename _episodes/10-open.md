@@ -73,7 +73,7 @@ by acting as a shareable electronic lab notebook for computational work:
 > is a work in progress (e.g. your data is still being collected, your code is only half 
 > finished) to prevent the unintended use of your research. We covered the difference between
 > public and private repositories in our 
-> [previous remotes lesson]({{ page.root }}{% link _episodes/12-citation.md %}).
+> [previous remotes lesson]({{ page.root }}{% link _episodes/07-github.md %}).
 > 
 > If you are unsure about how to begin with your Pawsey project, start with private repositories
 > and you can always make a public fork later on. Don't forget to chat to your supervisors
@@ -84,7 +84,7 @@ by acting as a shareable electronic lab notebook for computational work:
 >
 > Anything that is hosted in a version control repository (data, code, papers, 
 > etc.) can be turned into a citable object. You'll learn how to do this in
-> [the later episode on Citation]({{ page.root }}{% link _episodes/07-github.md %}).
+> [the later episode on Citation]({{ page.root }}{% link _episodes/11-attribution.md %}).
 {: .callout}
 
 > ## Preprint servers
