@@ -151,8 +151,11 @@ ls: cannot access '/c/Users/Vlad Dracula/.ssh': No such file or directory
 ~~~
 {: .output}
 
-If SSH has been set up on the computer you're using, the public and private key pairs will be listed. The file names are either `id_ed25519`/`id_ed25519.pub` or `id_rsa`/`id_rsa.pub` depending on how the key pairs were set up.  
+If you have used SSH before, but only with password authentication (e.g. to SSH into a server at university with your
+username and password), you might find that the `~/.ssh` directory exists, but only contains a file for `known_hosts`. 
+In this case you will still need to follow the steps below.
 
+If SSH has been fully set up on the computer you're using, the public and private key pairs will be listed. The file names are either `id_ed25519`/`id_ed25519.pub` or `id_rsa`/`id_rsa.pub` depending on how the key pairs were set up. 
 Since they don’t exist on Dracula’s computer, he uses this command to create them: 
 
 ~~~
@@ -243,7 +246,7 @@ git@github.com: Permission denied (publickey).
 ~~~
 {: .output}
 
-Right, we forgot that we need to give GitHub our public key!  
+See those last two lines? We forgot that we need to give GitHub our public key!  
 
 First, we need to copy the public key.  Be sure to include the `.pub` at the end, otherwise you’re looking at the private key. 
 
@@ -299,14 +302,7 @@ To https://github.com/vlad/planets.git
 {: .output}
 
 Since Dracula set up a passphrase, it will prompt him for it.  If you completed advanced settings for your authentication, it 
-will not prompt for a passphrase. IMPORTANT: GitHub has recently transitioned from password authentication to personal access token (PAT) (August 2021). You may be prompted by a pop up window to connect to GitHub. In this case, we will create a PAT. If you received an error or a different output with "git push origin main", the step may be relevant to you (otherwise skip this next step):
-
-~~~
-$ open https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
-~~~
-{: .language-bash}
-
-Once the PAT is entered once in your system's secure Credential Manager, you should be able to continue, now try the "git push origin main" command again to see if it works.
+will not prompt for a passphrase.
 
 > ## Proxy
 >
