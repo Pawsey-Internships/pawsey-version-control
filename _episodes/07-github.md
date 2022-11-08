@@ -80,8 +80,9 @@ Click on the 'SSH' link to change the [protocol]({{ page.root }}{% link referenc
 >
 > We use SSH here because, while it requires some additional configuration, it is a 
 > security protocol widely used by many applications.  The steps below describe SSH at a 
-> minimum level for GitHub. A supplemental episode to this lesson discusses advanced setup 
-> and concepts of SSH and key pairs, and other material supplemental to git related SSH. 
+> minimum level for GitHub. A [supplementary episode](https://pawsey-internships.github.io/version-control/16-access-tokens/index.html) 
+> to this lesson discusses how to set up and use the HTTPS protocol with GitHub, 
+> which requires a Personal Access Token (PAT). 
 {: .callout}
 
 ![Changing the Repository URL on GitHub](../fig/github-change-repo-string.png)
