@@ -1,15 +1,19 @@
 ---
-title: Collaborating
+title: Collaborating and multi-machine workflows
 teaching: 25
 exercises: 0
 questions:
-- "How can I use version control to collaborate with other people?"
+- "How can I use version control to work on my project across multiple computers?"
+- "How can I use version control to collaborate with my supervisors and other interns?"
 objectives:
+- "Understand why you would want to use version control in your project."
+- "Describe the basic workflow for your Pawsey project."
 - "Clone a remote repository."
 - "Collaborate by pushing to a common repository."
 - "Describe the basic collaborative workflow."
 keypoints:
 - "`git clone` copies a remote repository to create a local repository with a remote called `origin` automatically set up."
+- "Version control enhances project file management."
 ---
 
 For the next step, get into pairs.  One person will be the "Owner" and the other
