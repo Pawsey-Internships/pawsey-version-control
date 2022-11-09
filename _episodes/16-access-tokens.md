@@ -14,7 +14,7 @@ keypoints:
 
 # Create a Personal Access Token (PAT) for your GitHub Account
 
-Since 31/08/2021,  Git cannot clone a private GitHub repository or push to a GitHub repository using only a GitHub user name and password. In place of your password, you are required to use a Personal Access Token (PAT) that is created by the GitHub account that owns the remote repository or a GitHub account that has been invited to the repository as a collaborator.
+Since 31/08/2021, it has been impossible to clone a private GitHub repository or push to a GitHub repository using only a GitHub user name and password via HTTPS. In place of your password, you are required to use a Personal Access Token (PAT) that is created by the GitHub account that owns the remote repository or a GitHub account that has been invited to the repository as a collaborator. This is explained in the GitHub docs [here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
 
 You can create a PAT for GitHub in your account settings. If you are logged into a GitHub account, [this link](https://github.com/settings/tokens/) will take you to your PAT management page, Otherwise:
 
