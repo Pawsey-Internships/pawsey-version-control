@@ -79,10 +79,6 @@ After doing this, you may fix the identity used for this commit with:
  ~~~
 {: .output}
 
-~~~
-$ git checkout -b main
-~~~
-{: .language-bash}
 
 ~~~
 $ ssh-keygen -t ed25519 -C "github-account-email@gmail.com"
@@ -107,8 +103,7 @@ $ ssh -T git@github.com
 {: .language-bash}
 
 ~~~
-Hi bjornXXXXX! You've successfully authenticated, but GitHub does not provide shell access.
-
+Hi username! You've successfully authenticated, but GitHub does not provide shell access.
 ~~~
 {: .output}
 
