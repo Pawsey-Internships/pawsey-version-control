@@ -17,59 +17,32 @@ keypoints:
 {: .quotation}
 
 Free sharing of information might be the ideal in science,
-but the reality is often more complicated.
-Normal practice today looks something like this:
+but publication practices sometimes make this difficult. Typically, journals don't 
+require authors to submit their code, and only some require the actual data used in 
+a paper. Add to that the fact that many papers sit behind a paywall and all of a sudden
+the information doesn't seem so open.
 
-*   A scientist collects some data and stores it on a machine
-    that is occasionally backed up by her department.
-*   She then writes or modifies a few small programs
-    (which also reside on her machine)
-    to analyze that data.
-*   Once she has some results,
-    she writes them up and submits her paper.
-    She might include her data -- a growing number of journals require this -- but
-    she probably doesn't include her code.
-*   Time passes.
-*   The journal sends her reviews written anonymously by a handful of other people in her field.
-    She revises her paper to satisfy them,
-    during which time she might also modify the scripts she wrote earlier,
-    and resubmits.
-*   More time passes.
-*   The paper is eventually published.
-    It might include a link to an online copy of her data,
-    but the paper itself will be behind a paywall:
-    only people who have personal or institutional access
-    will be able to read it.
+However, a growing number of scientists are making use of <b> open access repositories </b>
+to share every element of their publication, from the paper, to the code, to the data. Now,
+a truly open workflow might look something like this:
 
-For a growing number of scientists,
-though,
-the process looks like this:
-
-*   The data that the scientist collects is stored in an open access repository
+*   The data is stored in an open access repository
     like [figshare](https://figshare.com/) or
     [Zenodo](https://zenodo.org), possibly as soon as it's collected,
     and given its own
     [Digital Object Identifier](https://en.wikipedia.org/wiki/Digital_object_identifier) (DOI).
     Or the data was already published and is stored in
     [Dryad](https://datadryad.org/).
-*   The scientist creates a new repository on GitHub to hold her work.
-*   As she does her analysis,
-    she pushes changes to her scripts
-    (and possibly some output files)
-    to that repository.
-    She also uses the repository for her paper;
-    that repository is then the hub for collaboration with her colleagues.
-*   When she's happy with the state of her paper,
-    she posts a version to [arXiv](https://arxiv.org/)
-    or some other preprint server
-    to invite feedback from peers.
-*   Based on that feedback,
-    she may post several revisions
-    before finally submitting her paper to a journal.
-*   The published paper includes links to her preprint
-    and to her code and data repositories,
+*   Code (and potentiall some output) is stored in a dedicated repository on [GitHub](https://github.com), 
+    [Bitbucket](https://bitbucket.org) or similar, which is kept up to date throughout the analysis process.
+*   The paper draft is also kept in a repository, or, if using LaTeX, on [Overleaf](https://www.overleaf.com/), 
+    so that there is a hub for collaboration with colleagues and co-authors.
+*   When the paper is ready, it is posted to a preprint server like [arXiv](https://arxiv.org/), 
+    and also submitted it to a journal of choice.
+*   The published paper includes links to the preprint, code and data repositories,
     which  makes it much easier for other scientists
-    to use her work as starting point for their own research.
+    to use the work as starting point for their own research.
+
 
 This open model accelerates discovery:
 the more open work is,
@@ -100,20 +73,25 @@ by acting as a shareable electronic lab notebook for computational work:
 > [the later episode on Citation]({{ page.root }}{% link _episodes/12-citation.md %}).
 {: .callout}
 
-> ## How Reproducible Is My Work?
+> ## Preprint servers
 >
-> Ask one of your labmates to reproduce a result you recently obtained
-> using only what they can find in your papers or on the web.
-> Try to do the same for one of their results,
-> then try to do it for a result from a lab you work with.
-{: .challenge}
+> Preprint servers like [arXiv](https://arxiv.org/) are now a popular way for researchers
+> to share their papers freely with the academic community. In some cases these are even
+> replacing traditional, subscription-based journals. If you're at the stage of publishing a
+> paper though, be sure to check the guidelines of the journal you want to submit to, and 
+> ask around in your discipline to find out whether there are any restrictions on when and
+> how you submit to a preprint server.
+{: .callout}
 
 > ## How to Find an Appropriate Data Repository?
 >
 > Surf the internet for a couple of minutes and check out the data repositories
 > mentioned above: [Figshare](https://figshare.com/), [Zenodo](https://zenodo.org),
-> [Dryad](https://datadryad.org/). Depending on your field of research, you might
-> find community-recognized repositories that are well-known in your field.
+> [Dryad](https://datadryad.org/). Others like [OpenDataRepository](https://www.opendatarepository.org)
+> are also a popular choice. Depending on your field of research, you might
+> find community-recognized repositories that are well-known in your field, especially
+> by looking at [journal](https://journals.plos.org/plosone/s/recommended-repositories)
+>  [recommendations](https://authorservices.taylorandfrancis.com/data-sharing/share-your-data/repositories/).
 > You might also find useful [these data repositories recommended by Nature](
 > https://www.nature.com/sdata/data-policies/repositories).
 > Discuss with your neighbor which data repository you might want to
