@@ -40,7 +40,19 @@ Note: Since this repository will be connected to a local repository, it needs to
 .gitignore" and "Add a license." See the "GitHub License and README files" exercise below for a full 
 explanation of why the repository needs to be empty.
 
+
+
 ![Creating a Repository on GitHub (Step 2)](../fig/github-create-repo-02.png)
+
+> ## Public vs Private Gihub Repos
+>
+> You will notice in the above example we have selected public when creating the repository.
+> As anyone can see these kinds of repositories you may not want to host sensitive code or data on them.
+> Whilst you have complete control over private repos, but they cost money unless you have a github student developer
+> pack.
+> Make sure to carefully consider what kind of access controls you need for a project repository but don't stress as
+> repos can easily be converted from private to public and vice versa.
+{: .callout}
 
 As soon as the repository is created, GitHub displays a page with a URL and some
 information on how to configure your local repository:
