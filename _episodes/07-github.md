@@ -4,6 +4,8 @@ teaching: 45
 exercises: 0
 questions:
 - "How do I share my changes with others on the web?"
+- "How can I use Git to push commits to a GitHub repository?"
+- "How can I use Git to clone a private to a GitHub repository?"
 objectives:
 - "Explain what remote repositories are and why they are useful."
 - "Push to or pull from a remote repository."
@@ -117,26 +119,50 @@ origin   git@github.com:vlad/planets.git (push)
 We'll discuss remotes in more detail in the next episode, while
 talking about how they might be used for collaboration.
 
-## SSH Background and Setup
-Before Dracula can connect to a remote repository, he needs to set up a way for his computer to authenticate with GitHub so it knows it’s him trying to connect to his remote repository. 
+> ## Cloning a private repo
+>
+> If you choose to create a private repository you will need to authenticate to clone
+> a repository regardless of if you chose to do so with ssh or https.
+{: .callout}
 
-We are going to set up the method that is commonly used by many different services to authenticate access on the command line.  This method is called Secure Shell Protocol (SSH).  SSH is a cryptographic network protocol that allows secure communication between computers using an otherwise insecure network.  
+## Github Authentication Setup
+Before Dracula can connect to a remote repository, he needs to set up a way for his computer to authenticate with GitHub so it knows it’s him trying to connect to his remote repository.
+
+We are going to set up the method that is commonly used by many different services to authenticate access on the command line.  This method is called Secure Shell Protocol (SSH).  SSH is a cryptographic network protocol that allows secure communication between computers using an otherwise insecure network.
 
 SSH uses what is called a key pair. This is two keys that work together to validate access. One key is publicly known and called the public key, and the other key called the private key is kept private. Very descriptive names.
 
-You can think of the public key as a padlock, and only you have the key (the private key) to open it. You use the public key where you want a secure method of communication, such as your GitHub account.  You give this padlock, or public key, to GitHub and say “lock the communications to my account with this so that only computers that have my private key can unlock communications and send git commands as my GitHub account.”  
+You can think of the public key as a padlock, and only you have the key (the private key) to open it. You use the public key where you want a secure method of communication, such as your GitHub account.  You give this padlock, or public key, to GitHub and say “lock the communications to my account with this so that only computers that have my private key can unlock communications and send git commands as my GitHub account.”
 
 What we will do now is the minimum required to set up the SSH keys and add the public key to a GitHub account.
 
 > ## Advanced SSH
-> A supplemental episode in this lesson discusses SSH and key pairs in more depth and detail. 
+> A supplemental episode in this lesson discusses SSH and key pairs in more depth and detail.
 {: .callout}
 
-The first thing we are going to do is check if this has already been done on the computer you’re on.  Because generally speaking, this setup only needs to happen once and then you can forget about it. 
+
+> ## A note on PAT's
+>
+> Personal access tokens (PAT) are an alternative to SSH keys intended solely for use as authentication for GitHub
+> remote repositories. As of Augst 2021 GitHub will no longer accept password based authentication so if you wish to
+> use GitHub without SSH you must create one.
+> Unlike SSH keys they are used in places where a password would normally be used such as the git command line, GitHub
+> cli or IDE git integration.
+> They look like this:
+> ~~~
+> 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
+> ~~~
+> {: .language-bash}
+> As such they are normally stored with some kind of credential manager. On MacOS this will be the Keychain Access app
+> and on windows or Linux it will be the Git Credential Manager (GCM). See [the github instructions](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) for how to create an use a PAT.
+{: .callout}
+
+
+  * [ ] The first thing we are going to do is check if this has already been done on the computer you’re on.  Because generally speaking, this setup only needs to happen once and then you can forget about it.
 
 > ## Keeping your keys secure
-> You shouldn't really forget about your SSH keys, since they keep your account secure. It’s good 
->  practice to audit your secure shell keys every so often. Especially if you are using multiple 
+> You shouldn't really forget about your SSH keys, since they keep your account secure. It’s good
+>  practice to audit your secure shell keys every so often. Especially if you are using multiple
 >  computers to access your account.
 {: .callout}
 
@@ -147,26 +173,42 @@ ls -al ~/.ssh
 ~~~
 {: .language-bash}
 
-Your output is going to look a little different depending on whether or not SSH has ever been set up on the computer you are using. 
+Your output is going to look a little different depending on whether or not SSH has ever been set up on the computer you are using.
 
-Dracula has not set up SSH on his computer, so his output is 
+Dracula has not set up SSH on his computer, so his output is
 
 ~~~
 ls: cannot access '/c/Users/Vlad Dracula/.ssh': No such file or directory
 ~~~
 {: .output}
 
-If SSH has been set up on the computer you're using, the public and private key pairs will be listed. The file names are either `id_ed25519`/`id_ed25519.pub` or `id_rsa`/`id_rsa.pub` depending on how the key pairs were set up.  
+If SSH has been set up on the computer you're using, the public and private key pairs will be listed. The file names are either `id_ed25519`/`id_ed25519.pub` or `id_rsa`/`id_rsa.pub` depending on how the key pairs were set up.
 
-Since they don’t exist on Dracula’s computer, he uses this command to create them: 
+Since they don’t exist on Dracula’s computer, he uses this command to create them:
 
 ~~~
 $ ssh-keygen -t ed25519 -C "vlad@tran.sylvan.ia"
 ~~~
 {: .language-bash}
 
-If you are using a legacy system that doesn't support the Ed25519 algorithm, use:
-`$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`
+> ## Legacy Systems
+>
+> Ed25519 is an [EdDSA](https://en.wikipedia.org/wiki/EdDSA) scheme with small fixed size keys introduced in
+> OpenSSH 6.5. However because it is a rather new algorithm its adoption is not yet universal.
+> If you are using a legacy system that doesn't support the Ed25519 algorithm, use:
+> ~~~
+> $ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`
+> ~~~
+> {: .language-bash}
+> as it will generate an RSA key of similar complexity.
+{: .callout}
+
+> ## Windows
+>
+> To generate an SSH key on windows you will need the Windows Subsystem for Linux (WSL) installed.
+> This also means that authentication to remote repositories will need to be done in the WSL shell
+> and it will be more convenient to use the WSL filesystem.
+  {: .callout}
 
 ~~~
 Generating public/private ed25519 key pair.
@@ -303,15 +345,7 @@ To https://github.com/vlad/planets.git
 ~~~
 {: .output}
 
-Since Dracula set up a passphrase, it will prompt him for it.  If you completed advanced settings for your authentication, it 
-will not prompt for a passphrase. IMPORTANT: GitHub has recently transitioned from password authentication to personal access token (PAT) (August 2021). You may be prompted by a pop up window to connect to GitHub. In this case, we will create a PAT. If you received an error or a different output with "git push origin main", the step may be relevant to you (otherwise skip this next step):
-
-~~~
-$ open https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
-~~~
-{: .language-bash}
-
-Once the PAT is entered once in your system's secure Credential Manager, you should be able to continue, now try the "git push origin main" command again to see if it works.
+If you set a passphrase for your SSH key you will be prompted for it here otherwise it will push with no issues.
 
 > ## Proxy
 >
