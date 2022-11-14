@@ -539,3 +539,56 @@ moving backward and forward in time becomes much easier.
 > ~~~
 > {: .language-bash}
 {: .challenge}
+
+> ## How to change your last commit
+>
+> Sometimes you will find you might want to add things to your last commit. For example you might
+> have broken a build or want to change formatting. Instead of creating a completely separate commit
+> or rebasing you can simply run:
+> ~~~
+>  $ git commit --ammend
+> ~~~
+> {: .language-bash}
+>
+>  It will take your existing staged changes
+> and add them to the current commit by creating a whole new commit will all the changes combined.
+> When you commit you are given the opporutnity to reword your commit message or you can simply leave
+> it unchanged.
+>
+> Make a change to mars.txt and ammend your last commit with a new message
+> > ## Solution
+> >
+> > lets add some output
+> >  ~~~
+> > $ echo "A small fix" >> mars.txt
+> > ~~~
+> > {: .language-bash}
+> >
+> > Next we will ammend our last commit
+> >  ~~~
+> > $ git commit --amend
+> > ~~~
+> > {: .language-bash}
+> > After changing the message running
+> >  ~~~
+> > $ git log
+> > ~~~
+> > {: .language-bash}
+> >  Should show that the most recent commit has the message you just wrote and running:
+> >  ~~~
+> > $ git diff HEAD HEAD~1
+> > ~~~
+> > {: .language-bash}
+> > Should show that the most recent commit also includes "A small fix".
+> {: .solution}
+> You can use ammending to undo mistakes in a commit but depending on the scenario it might not
+> be the most simple solution.
+{: .challenge}
+
+
+> ## Get help to undo almost anything
+>
+> [Seth Robertson's guide](https://sethrobertson.github.io/GitFixUm/fixup.html)
+> is a one stop "choose your own adventure shop" for undoing things in git. If you get
+> stuck follow this guide.
+{: .callout}
