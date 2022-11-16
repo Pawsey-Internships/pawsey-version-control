@@ -35,7 +35,7 @@ a truly open workflow might look something like this:
     [Dryad](https://datadryad.org/).
 *   Code (and potentiall some output) is stored in a dedicated repository on [GitHub](https://github.com), 
     [Bitbucket](https://bitbucket.org) or similar, which is kept up to date throughout the analysis process.
-*   The paper draft is also kept in a repository, or, if using LaTeX, on [Overleaf](https://www.overleaf.com/), 
+*   The paper draft is also kept in a <b>private</b> repository, or, if using LaTeX, on [Overleaf](https://www.overleaf.com/), 
     so that there is a hub for collaboration with colleagues and co-authors.
 *   When the paper is ready, it is posted to a preprint server like [arXiv](https://arxiv.org/), 
     and also submitted it to a journal of choice.
@@ -65,12 +65,26 @@ by acting as a shareable electronic lab notebook for computational work:
     computational results in a way that is unique and recoverable.
 *   With a version control system such as Git, 
     the entire history of the repository is easy to archive for perpetuity.
+    
+    
+> ## Work in progress & Pawsey projects
+>
+> It is often a good idea to start out with a private repository for code and/or data that
+> is a work in progress (e.g. your data is still being collected, your code is only half 
+> finished) to prevent the unintended use of your research. We covered the difference between
+> public and private repositories in our 
+> [previous remotes lesson]({{ page.root }}{% link _episodes/12-citation.md %}).
+> 
+> If you are unsure about how to begin with your Pawsey project, start with private repositories
+> and you can always make a public fork later on. Don't forget to chat to your supervisors
+> about this too!
+{: .callout}
 
 > ## Making Code Citable
 >
 > Anything that is hosted in a version control repository (data, code, papers, 
 > etc.) can be turned into a citable object. You'll learn how to do this in
-> [the later episode on Citation]({{ page.root }}{% link _episodes/12-citation.md %}).
+> [the later episode on Citation]({{ page.root }}{% link _episodes/07-github.md %}).
 {: .callout}
 
 > ## Preprint servers
