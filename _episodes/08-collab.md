@@ -15,7 +15,7 @@ keypoints:
 - "Version control enhances project file management."
 ---
 
-Now most of you are going to be working on <b>Setonix/Magnus/Topaz - confirm</b>,
+Now most of you are going to be working on <b>Setonix</b> or <b>Topaz</b>,
 but from time to time you may want to develop scripts or work on your projects on
 your local machine. Here, we're going to see how you can use version control to 
 set up a multi-machine workflow to efficiently transfer your work between your own
@@ -24,11 +24,12 @@ machine and Pawsey systems.
 Some of the steps here should be revision from previous lessons, so try to do as much
 as you can without looking at the answers!
 
-First, you'll need to ssh into <b>Setonix - confirm</b> and change into your scratch
-directory, as this is where we want to put `planets`.
+First, you'll need to ssh into Setonix and change into your scratch
+directory, as this is where we want to put `planets`. (Instead of `pawsey_username` here
+you should use the Pawsey training account you were given yesterday).
 
 ~~~
-$ ssh username@setonix.pawsey.org.au
+$ ssh pawsey_username@setonix.pawsey.org.au
 $ cd $MYSCRATCH
 ~~~
 {: .language-bash}
@@ -67,7 +68,7 @@ To create a key on <b>Zeus/magnus/setonix</b> you would use the command:
 {: .solution}
 
 
-Then, we'll make a copy of the entire remote repository on <b>Setonix</b>
+Then, we'll make a copy of the entire remote repository on Setonix
 using a process called "cloning a repo". `git clone` (don't forge to change 
 username to your own!):
 
@@ -115,7 +116,7 @@ Take a look at the repository on GitHub again, and you should be
 able to see the new commit. You may need to refresh
 your browser to see the new commit.
 
-Now, either logout of <b>Setonix - check</b> (remember you can just type `logout`), or open a new
+Now, either logout of Setonix (remember you can just type `logout`), or open a new
 terminal window and navigate to the `planets` directory on your local machine. Enter the `ls` command
 and inspect the output. Do you see `pawsey_planets.txt`? If not, why? and what do you need to do to fix 
 it?
@@ -131,7 +132,7 @@ it?
 {: .solution}
 
 And that's all there is to it! You have your `planets` directory on both your local machine and 
-<b>Setonix - confirm </b> linked via the remote repository on GitHub, and you can easily transfer
+Setonix linked via the remote repository on GitHub, and you can easily transfer
 your code/files/results between the two.
 
 > ## GitHub and large data files
