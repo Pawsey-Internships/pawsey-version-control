@@ -38,7 +38,7 @@ Next you'll need to go through the process of setting up a public-private pair
 again like we did on your local machine, and copying it to your [GitHub account](https://github.com/settings/keys) 
 (don't forget to note down the passphrase you choose at the prompt!):
 
-## Hint
+> ## Hint
 > Remember once you have set it up, you can find the public key to copy over here:
 > ~~~
 > $ cat ~/.ssh/id_ed25519.pub
@@ -59,8 +59,8 @@ again like we did on your local machine, and copying it to your [GitHub account]
 > {: .output}
 {: .solution}
 
-## Solution
-To create a key on <b>Zeus/magnus/setonix</b> you would use the command:
+> ## Solution
+To create a key on Setonix you would use the command:
 > ~~~
 > $ ssh-keygen -t ed25519 -C "github-account-email@gmail.com"
 > ~~~
@@ -121,7 +121,7 @@ terminal window and navigate to the `planets` directory on your local machine. E
 and inspect the output. Do you see `pawsey_planets.txt`? If not, why? and what do you need to do to fix 
 it?
 
-## Solution
+> ## Solution
 > No, you won't see `pawsey_planets.txt` yet because we haven't updated the repo on our local machine!
 > To fix this we need to pull from the remote repository again:
 > ~~~
@@ -188,7 +188,7 @@ to make some changes, <i>stage</i> those changes with `git add`, commit them wit
 `git commit` (don't forget to add a commit message) and finally <i>push</i> the 
 commit.
 
-## Solution
+> ## Solution
 > Your process might look something like this:
 > 
 > ~~~
