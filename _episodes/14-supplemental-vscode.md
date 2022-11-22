@@ -1,23 +1,35 @@
 ---
-title: "Supplemental: Using Git from VS-Code"
-teaching: 10
-exercises: 0
+title: "Using git in and Integrated Development Environment (Visual Studio Code)"
+teaching: 20
+exercises: 5
 questions:
-- "How can I use Git with VS-Code?"
+- "What is an IDE?"
+- "What is VS-Code"
+- "How can a visual interface to Git be benificial"
 objectives:
-- "Understand how to use Git from VS-Code."
+- "Understand the purpose and advantages of an integrated development environment (IDE)."
+- "See how Git can be used within the workflow of an IDE."
+- "See how Git is set up in Visual Studio Code VS-Code."
 keypoints:
 - "Using VS-Code's Git integration allows you to version control a project over time."
+- "IDE's can provide a powerful interface to tools and languages that many developers prefer"
 ---
 
+An integrated development environment (IDE) is software for building applications 
+that combines common developer tools into a single graphical user interface (GUI). 
+An IDE typically consists of a code editor, some form of build automation and a debuger. 
 
-Version control can be very useful when developing data analysis scripts. For
-that reason, the popular development environment
-[Visual Studio Code ][https://code.visualstudio.com/] for the R programming language has built-in
+An IDE allows developers to start programming new applications quickly because multiple utilities 
+don’t need to be manually configured and integrated as part of the setup process. 
+Developers also don’t need to spend hours individually learning how to use different tools when every utility is represented in the same workbench.
+Version control is another tool that can be very useful when developing code and most IDE's have some visual interface to it.
+
+[Visual Studio Code ](https://code.visualstudio.com/) is currently the most popular
+IDE. It has support for almost all popular programming languages and great
 integration with Git. While some advanced Git features still require the
 command-line, VS-Code has a nice interface for many common Git operations.
 
-Next lets open our existing planets folder in VS-Code:
+start by opening our existing planets folder in VS-Code:
 
 ![VS-Code screenshot showing the file menu dropdown with "New Project..." selected](../fig/vscode-file-selection.png)
 
@@ -45,7 +57,7 @@ Clicking on this icon will bring up a different menu in VS-Code.
 > 
 > If this were a completely new project with no git repo we would have to initalise one.
 > VS-Code makes this simple by having a single click button:
-> ![VS-Code screenshot showing how to initialise a repository](../fig/vscode-initialise.png)
+> ![VS-Code screenshot showing how to initialise a repository](../fig/vscode-initialise-repository.png)
 {: .callout}
 
 To stage a file simply mouse over the 
@@ -63,7 +75,7 @@ The changes can be pushed by selecting "Push Branch" from the Git menu. There
 are also options to pull from the remote repository, and to view the commit
 history:
 
-![VS-Code screenshot showing the git menu dropdown with "History" selected](../fig/VS-Code_screenshot_history.png)
+![VS-Code screenshot showing the git menu dropdown with "History" selected](../fig/vscode-history.png)
 
 
 To push this to our remote repository we just need to click the sync button. 
