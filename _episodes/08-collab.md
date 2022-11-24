@@ -74,7 +74,7 @@ username to your own!):
 
 ~~~
 $ git clone git@github.com:username/planets.git
-$ git checkout -b main
+$ cd planets
 ~~~ 
 {: .language-bash}
 
