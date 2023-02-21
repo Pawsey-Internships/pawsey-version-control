@@ -1,0 +1,13 @@
+baseURL = 'https://pawsey-internships.github.io/Example_Template'
+languageCode = 'en-us'
+title = 'Example Template'
+theme = "learn"
+
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
+
+[params]
+disableBreadcrumb = false
+disableNextPrev = false
+themeVariant = "pawsey"
+disableLandingPageButton = true
