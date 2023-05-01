@@ -1,6 +1,6 @@
-baseURL = 'https://pawsey-internships.github.io/Example_Template'
+baseURL = 'https://pawsey-internships.github.io/version-control/'
 languageCode = 'en-us'
-title = 'Example Template'
+title = 'Pawsey Intern Training: Version Control'
 theme = "learn"
 
 [outputs]
