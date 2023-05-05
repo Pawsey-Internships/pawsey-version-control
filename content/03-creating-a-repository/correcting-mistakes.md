@@ -31,7 +31,6 @@ chapter = false
   If the files or folder being removed in this fashion are tracked by Git, then their removal 
   becomes another change that we will need to track, as we will see in the next episode.
  
-  ### Solution
   Git keeps all of its files in the `.git` directory.
   To recover from this little mistake, Dracula can just remove the `.git`
   folder in the moons subdirectory by running the following command from inside the `planets` directory:

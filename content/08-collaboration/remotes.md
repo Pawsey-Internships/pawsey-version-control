@@ -49,7 +49,6 @@ again like we did on your local machine, and copying it to your [GitHub account]
 {{% /expand %}} 
 
 {{% expand "Solution" %}}
-## Solution
 To create a key on Setonix you would use the command:
  ```
  $ ssh-keygen -t ed25519 -C "github-account-email@gmail.com"
@@ -110,7 +109,6 @@ and inspect the output. Do you see `pawsey_planets.txt`? If not, why? and what d
 it?
 
 {{% expand "Solution" %}}
- ## Solution
  No, you won't see `pawsey_planets.txt` yet because we haven't updated the repo on our local machine!
  To fix this we need to pull from the remote repository again:
  ```Bash
@@ -179,7 +177,6 @@ to make some changes, <istage</i those changes with `git add`, commit them with
 commit.
 
 {{% notice note %}}
-## Solution
  Your process might look something like this:
  
  ```Bash

@@ -11,7 +11,7 @@ chapter = true
 **exercises:** 0 minutes
 
 **questions:**
-- "How can I tell Git to ignore files I don't want to track?"
+- How can I tell Git to ignore files I don't want to track?
 
 **objectives:**
 - Configure Git to ignore specific files.

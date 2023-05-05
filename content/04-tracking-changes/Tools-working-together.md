@@ -15,7 +15,6 @@ chapter = false
 
 
 {{% expand "Solution" %}}
-  ## Solution
   Answer 1 is not descriptive enough, and the purpose of the commit is unclear;
   and answer 2 is redundant to using "git diff" to see what changed in this commit;
   but answer 3 is good: short, descriptive, and imperative.

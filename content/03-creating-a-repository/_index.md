@@ -12,10 +12,10 @@ chapter = true
 **exercises:** 0 minutes
 
 **questions:**
-- "Where does Git store information?"
+- Where does Git store information?
 
 **objectives:**
-- "`git init` initializes a repository."
-- "Git stores all of its repository data in the `.git` directory."
+- `git init` initializes a repository.
+- Git stores all of its repository data in the `.git` directory.
 
 {{% /notice %}}

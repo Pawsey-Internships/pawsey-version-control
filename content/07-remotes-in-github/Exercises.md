@@ -13,7 +13,6 @@ chapter = false
  How would you get that same information in the shell?
 
 {{% expand "Solution" %}}
-## Solution
   The left-most button (with the picture of a clipboard) copies the full identifier of the commit 
   to the clipboard. In the shell, ```git log``` will show you the full commit identifier for each 
   commit.
@@ -51,7 +50,6 @@ chapter = false
  record times, and why?
 
 {{% expand "Solution" %}}
-## Solution
   GitHub displays timestamps in a human readable relative format (i.e. "22 hours ago" or "three 
   weeks ago"). However, if you hover over the timestamp, you can see the exact time at which the 
   last change to the file occurred.
@@ -63,7 +61,6 @@ chapter = false
  How is "git push" different from "git commit"?
 
 {{% expand "Solution" %}}
-## Solution
   When we push changes, we're interacting with a remote repository to update it with the changes 
   we've made locally (often this corresponds to sharing the changes we've made with others). 
   Commit only updates your local repository.
@@ -76,7 +73,6 @@ chapter = false
  would have happened when you tried to link your local and remote repositories?
 
 {{% expand "Solution" %}}
-## Solution
   In this case, we'd see a merge conflict due to unrelated histories. When GitHub creates a 
   README.md file, it performs a commit in the remote repository. When you try to pull the remote 
   repository to your local repository, Git detects that they have histories that do not share a 

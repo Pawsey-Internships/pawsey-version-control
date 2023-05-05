@@ -96,7 +96,6 @@ GitHub) are back in sync.
  command line? And on GitHub?
 
 {{% expand "Solution" %}}
-  ## Solution
   On the command line, the Collaborator can use ```git fetch origin main```
   to get the remote changes into the local repository, but without merging
   them. Then by running ```git diff main origin/main``` the Collaborator

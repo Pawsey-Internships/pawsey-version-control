@@ -21,7 +21,6 @@ chapter = false
  that is stored in version control?
 
 {{% expand "Solution" %}}
-## Solution
  
   Let's try it. Suppose Dracula takes a picture of Martian surface and
   calls it `mars.jpg`.
@@ -213,7 +212,6 @@ chapter = false
  |6    | Celebrate!                | `AFK`                      |
 
 {{% expand "Solution" %}}
-  ## Solution
  
   |order|action . . . . . . |command . . . . . . . . . . . . . . . . . . . |
   |-----|-------------------|----------------------------------------------|

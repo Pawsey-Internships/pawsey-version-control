@@ -93,7 +93,6 @@ the window:
  2. Stage this file and commit it using VS-Code's interface
 
 {{% expand "Solution" %}}
-  ## Solution to Challenge
  
   See the screenshots on how to add a file. In the history section 
   You should see another commit 
