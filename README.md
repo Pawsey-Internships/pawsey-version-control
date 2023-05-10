@@ -1,7 +1,15 @@
-Version Control with Git
-========================
+# Pawsey internship Version control workshop
 
-An introduction to version control for novices using Git.
-Please see <https://pawsey-internships.github.io/version-control/> for a rendered version of this material.
+## How to run
 
-This workshop is based on marterials developed as part of [Software Carpentry initiative](https://github.com/swcarpentry/git-novice).
+This should be automatically hosted on github pages. But for development
+
+``` sh
+hugo server
+```
+
+## Things left to consider/TODO
+
+1. Carpentries key points summary
+found under episodes->key points has a nice once page summary of everything
+2. Carpentries glossary
