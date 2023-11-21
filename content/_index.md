@@ -25,7 +25,4 @@ Version control is the lab notebook of the digital world: it’s what profession
 
 > ## Prerequisites
 > In this lesson we use Git from the Unix Shell. Some previous experience with the shell is expected, but isn’t mandatory.
->
->
-> Also make sure you have read through the [Pawsey Internship Welcome Pack - UPDATE LINK](https://docs.google.com/document/d/1nuaTLX2YJAkATxj7oqHG_1kmzoaycZGl/edit)
 
